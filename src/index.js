@@ -14,7 +14,7 @@ export default function (date) {
   const percent = Math.floor((((date - initialDate) / (1000 * 60 * 60 * 24)) * 100) / 365)
   let yearBar = ''
 
-  for (let i = 5; i <= 100; i += 4) {
+  for (let i = 5; i <= 100; i += 6) {
     yearBar = (i < percent) ? yearBar + '▓' : yearBar + '░'
   }
 
