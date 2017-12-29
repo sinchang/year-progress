@@ -1,0 +1,57 @@
+{
+  "name": "year-progress",
+  "version": "0.0.1",
+  "description": "my groovy project",
+  "repository": {
+    "url": "sinchang/year-progress",
+    "type": "git"
+  },
+  "main": "dist/index.common.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test:cov": "jest --coverage && npm run lint",
+    "test": "npm run lint && jest",
+    "test:watch": "jest --watch",
+    "lint": "standard",
+    "publish": "npm run build && npm publish",
+    "build": "bili --filename index"
+  },
+  "author": "sinchang <sinchangwen@gmail.com>",
+  "license": "MIT",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "targets": {
+                "node": "current"
+              }
+            }
+          ]
+        ]
+      }
+    }
+  },
+  "standard": {
+    "globals": [
+      "expect",
+      "test"
+    ]
+  },
+  "dependencies": {
+    "lodash.isdate": "^4.0.1"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.4.0",
+    "bili": "^0.17.0",
+    "jest-cli": "^19.0.0",
+    "standard": "^10.0.0"
+  }
+}
