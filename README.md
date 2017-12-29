@@ -15,7 +15,7 @@ npm i year-progress
 const yearProgress = require('year-progress')
 
 yearProgress()
-//=> { yearBar, percent }
+//=> { yearBar: '▓▓▓▓▓▓░░░░░░░░░░', percent: 41 }
 ```
 
 ## Contributing
